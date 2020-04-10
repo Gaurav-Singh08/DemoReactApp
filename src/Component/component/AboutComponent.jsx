@@ -4,7 +4,7 @@ class AboutComponent extends React.Component {
     render() {
 
         return (
-            <h1>{this.props.match.params.id}</h1>
+            <img src= {this.props.match.params.id}></img>
         );
     }
 }

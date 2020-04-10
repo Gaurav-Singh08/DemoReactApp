@@ -1,9 +1,10 @@
 import React from "react";
 import Navigation from "./navBar/navigation";
 import AboutComponent from "./component/AboutComponent";
-import PricingComponent from "./component/PricingComponent";
+import SearchMusicComponent from "./component/SearchMusicComponent";
+import ImagesComponent from "./component/ImagesComponent";
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import HomeComponent from "./component/HomeComponent";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 class AppComponent extends React.Component {
     render() {
@@ -11,9 +12,10 @@ class AppComponent extends React.Component {
             <div>
                 <Router>
                     <Navigation></Navigation>
-                    <Route path = "/about/:id" component ={AboutComponent}/>
-                    <Route path = "/" exact component ={HomeComponent}/>
-                    <Route path = "/pricing" component ={PricingComponent}/>
+                    <Route path="/about/:id/:width/:height" component={AboutComponent}/>
+                    <Route path="/" exact component={HomeComponent}/>
+                    <Route path="/walls" component={ImagesComponent}/>
+                    <Route path="/music" component={SearchMusicComponent}/>
                 </Router>
             </div>
         );

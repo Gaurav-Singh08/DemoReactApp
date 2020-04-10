@@ -11,7 +11,7 @@ class CardComponent extends React.Component {
                         (
 
                             <div className="col-md-4 col-xs-6 mt-5" key={image.id}>
-                                <Link to={`/about/${image.id}`}>
+                                <Link to={`/about/${image.id+'/'+image.width+'/'+image.height}`}>
                                     <div className="card">
 
                                         <img className="card-img-top img-fluid"
